@@ -138,4 +138,47 @@ td {
 
 /* Primeira coluna (Disciplina) com mais destaque */
 td:first-child {
-    color: var(--cor-lilas-destaquex
+    color: var(--cor-lilas-destaque);
+    font-weight: bold;
+}
+
+/* Efeito ao passar o mouse na linha - o tom roxo uniforme */
+tbody tr {
+    transition: background-color 0.2s ease;
+    cursor: pointer; /* Mostra a mãozinha, indicando que é clicável */
+}
+
+tbody tr:hover {
+    background-color: var(--cor-hover-linha);
+}
+
+/* Classes para cores de situação (serão usadas pelo JavaScript) */
+.bom-desempenho {
+    color: #81c784; /* Verde suave */
+    font-weight: bold;
+}
+
+.atencao {
+    color: #e57373; /* Vermelho suave */
+    font-weight: bold;
+}
+
+.nota-indisponivel {
+    color: #90a4ae; /* Cinza para nota ausente */
+}
+
+/* Responsividade para Celulares */
+@media (max-width: 768px) {
+    .cabecalho h1 {
+        font-size: 2em;
+    }
+
+    .card p {
+        font-size: 2em;
+    }
+
+    th, td {
+        padding: 10px;
+        font-size: 0.8em;
+    }
+}
